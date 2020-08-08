@@ -1,0 +1,38 @@
+{
+  "name": "node_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node index.js",
+    "watch": "cross-env NODE_ENV=development nodemon index.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "module-alias": "^2.2.2",
+    "mongoose": "^5.9.28"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@config": "./config",
+    "@handler": "./api/handlers",
+    "@middleware": "./api/middlewares",
+    "@helper": "./api/helpers",
+    "@request": "./api/requests",
+    "@model": "./api/models",
+    "@core": "./core",
+    "@route": "./routes"
+  }
+}
